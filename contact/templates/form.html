@@ -1,0 +1,43 @@
+<!-- default way of rendering  -->
+
+<!-- <form action="">
+    {{form}}
+</form> -->
+
+<!-- Manual way of rendering a form  -->
+
+<!-- <form action="">
+    <label for="">{{form.full_name.label}}</label>
+    {{form.full_name}}
+    <br><br>
+    <label for="">{{form.name.label}}</label>
+    {{form.name}}
+    <br><br>
+    <label for="">{{form.email.label}}</label>
+    {{form.email}}
+    <br><br>
+    <label for="">{{form.message.label}}</label>
+    {{form.message}}
+    <br><br>
+    <input type="submit">
+</form> -->
+
+<!-- rendering a form using for loop -->
+
+<!-- <form action="">
+    {% for item in form %}
+        <label for="">{{item.label}}</label>
+        {{item}}
+        <br><br>
+    {% endfor %}
+    <input type="submit">
+</form> -->
+
+<!-- Direct rendering of form (default way) -->
+
+<form action="" method="post">
+    {% csrf_token %}
+    {{forms}}
+    <br><br>
+    <input type="submit">
+</form>
